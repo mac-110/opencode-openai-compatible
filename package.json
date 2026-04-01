@@ -1,0 +1,51 @@
+{
+  "name": "opencode-openai-compatible",
+  "version": "1.0.0",
+  "description": "OpenAI-compatible provider for OpenCode — connect any OpenAI-compatible API endpoint (kiro-gateway, LiteLLM, LocalAI, Ollama, etc.)",
+  "main": "dist/index.js",
+  "module": "dist/index.mjs",
+  "types": "dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.mjs",
+      "require": "./dist/index.js"
+    }
+  },
+  "files": ["dist", "README.md"],
+  "scripts": {
+    "build": "tsup src/index.ts --format cjs,esm --dts",
+    "prepublishOnly": "npm run build"
+  },
+  "keywords": [
+    "opencode",
+    "openai-compatible",
+    "litellm",
+    "ollama",
+    "localai",
+    "llm",
+    "ai",
+    "provider",
+    "plugin"
+  ],
+  "author": "mac110",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mac-110/opencode-openai-compatible.git"
+  },
+  "bugs": {
+    "url": "https://github.com/mac-110/opencode-openai-compatible/issues"
+  },
+  "homepage": "https://github.com/mac-110/opencode-openai-compatible#readme",
+  "dependencies": {
+    "@ai-sdk/openai-compatible": "^2.0.20"
+  },
+  "devDependencies": {
+    "tsup": "^8.0.0",
+    "typescript": "^5.0.0"
+  },
+  "peerDependencies": {
+    "ai": "^6.0.50"
+  }
+}
