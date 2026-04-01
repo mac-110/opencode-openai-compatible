@@ -1,12 +1,24 @@
-# opencode-openai-compatible
+# @mac110/opencode-openai-compatible
 
 OpenAI-compatible provider plugin for [OpenCode](https://opencode.ai) — connect any OpenAI-compatible API endpoint such as kiro-gateway, LiteLLM, LocalAI, Ollama, and more.
 
 ## Installation
 
 ```bash
-npm install opencode-openai-compatible
+npm install @mac110/opencode-openai-compatible
 ```
+
+Or add it to your OpenCode `~/.config/opencode/package.json`:
+
+```json
+{
+  "dependencies": {
+    "@mac110/opencode-openai-compatible": "latest"
+  }
+}
+```
+
+Then run `bun install` (or `npm install`) in `~/.config/opencode/`.
 
 ## Configuration
 
@@ -17,7 +29,7 @@ Add the provider to your OpenCode `config.json` (`~/.config/opencode/config.json
   "$schema": "https://opencode.ai/config.json",
   "provider": {
     "myprovider": {
-      "npm": "opencode-openai-compatible",
+      "npm": "@mac110/opencode-openai-compatible",
       "env": ["MY_API_KEY"],
       "models": {
         "my-model": {
@@ -53,7 +65,7 @@ export MY_API_KEY="your-api-key"
 {
   "provider": {
     "kiro": {
-      "npm": "opencode-openai-compatible",
+      "npm": "@mac110/opencode-openai-compatible",
       "env": ["KIRO_API_KEY"],
       "models": {
         "claude-opus-4.6": {
@@ -80,7 +92,7 @@ export MY_API_KEY="your-api-key"
 {
   "provider": {
     "ollama": {
-      "npm": "opencode-openai-compatible",
+      "npm": "@mac110/opencode-openai-compatible",
       "env": ["OLLAMA_API_KEY"],
       "models": {
         "llama3": {
